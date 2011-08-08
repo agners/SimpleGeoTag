@@ -1,0 +1,17 @@
+.gm_info_window {
+    width:270px; 
+    height:180px;
+    overflow: hidden;
+    }
+    
+.gm_info_window P{  
+    font-size: 10px !important; 
+    text-align: justify !important; 
+    font-family:tahoma !important;
+    color:#000 !important;
+    }
+
+ 
+.gm_info_window A{
+      color: #f00 !important;   
+    }

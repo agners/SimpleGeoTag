@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>simplegeotag</name>
+	<creationDate>2011-08-08</creationDate>
+	<author>Stefan Agner</author>
+	<authorEmail>stefan@agner.ch</authorEmail>
+	<authorUrl>http://blog.agner.ch</authorUrl>
+    <copyright>This component is released under the GNU/GPLv3 License</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0</version>
+	<description>This component can assign geotag to articles and show them on a map (forked version of artgeotag from Alessandro Argentiero)</description>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>simplegeotag.php</filename>
+		<filename>index.html</filename>
+        <filename>images/flag.png</filename>
+        <filename>images/sub.png</filename>		
+        <filename>css/simplegeotag.css</filename>
+		<filename>tables/index.html</filename>	
+		<filename>tables/simplegeotag.php</filename>
+		<filename>models/index.html</filename>
+		<filename>models/admin.php</filename> 
+		<filename>models/common.php</filename> 		
+		<filename>models/create.php</filename> 			
+		<filename>models/simplegeotag.php</filename>        
+		<filename>views/index.html</filename>
+		<filename>views/default/index.html</filename>
+		<filename>views/default/view.html.php</filename>
+		<filename>views/default/tmpl/default.php</filename>
+        <filename>views/default/tmpl/default.xml</filename>
+		<filename>views/default/tmpl/index.html</filename>
+		<filename>views/admin/index.html</filename>
+		<filename>views/admin/view.html.php</filename>
+		<filename>views/admin/tmpl/default.php</filename>
+		<filename>views/admin/tmpl/default.xml</filename>        
+		<filename>views/admin/tmpl/index.html</filename>		
+		<filename>views/create/index.html</filename>
+		<filename>views/create/view.html.php</filename>
+		<filename>views/create/tmpl/default.php</filename>
+        <filename>views/create/tmpl/default.xml</filename>
+		<filename>views/create/tmpl/index.html</filename>		
+	</files>
+
+    <install>
+		<queries>
+			<query id="1">
+				CREATE TABLE IF NOT EXISTS `#__simpleiclesgeotag`( 
+				`id` int(10) unsigned NOT NULL auto_increment,
+				`content_id` int(10) unsigned NOT NULL,
+				`text` text,  `lat` text NOT NULL,
+				`long` text NOT NULL,
+				`note` text,  
+				PRIMARY KEY  (`id`)
+				)  TYPE=MyISAM;
+			</query>
+			<query id="2">
+				INSERT INTO `#__simpleiclesgeotag` ( `content_id`, `text`, `lat`, `long`, `note`) VALUES( 1, 'Example 1', '-37.16031654673676', '19.6875', NULL);
+			</query>
+			<query id="3">
+				INSERT INTO `#__simpleiclesgeotag` ( `content_id`, `text`, `lat`, `long`, `note`) VALUES( 2, 'Example 2', '34.05265942137599', '-118.2568359375', NULL);
+			</query>
+		</queries>
+    </install>
+    <uninstall>
+		<queries>
+			<query>
+				DROP TABLE `#__simpleiclesgeotag`;
+			</query>
+		</queries>
+    </uninstall>
+ 
+	<administration>
+		<menu>Articles Geotag</menu>
+        <files folder="admin">
+			<filename>index.html</filename>
+			<filename>admin.simplegeotag.php</filename>
+			<filename>config.xml</filename>			
+			<filename>controller.php</filename>			
+			<filename>views/default/index.html</filename>
+			<filename>views/default/view.html.php</filename>
+			<filename>views/default/tmpl/default.php</filename>
+			<filename>views/default/tmpl/index.html</filename>
+		</files>  
+	</administration>
+    
+</install>
