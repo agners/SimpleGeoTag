@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<install type="component" version="1.5.0">
+<extension type="component" version="1.6.0" client="site" method="upgrade">
 	<name>simplegeotag</name>
 	<creationDate>2011-08-08</creationDate>
 	<author>Stefan Agner</author>
@@ -33,7 +33,7 @@
 		<filename>views/admin/index.html</filename>
 		<filename>views/admin/view.html.php</filename>
 		<filename>views/admin/tmpl/default.php</filename>
-		<filename>views/admin/tmpl/default.xml</filename>        
+		<filename>views/admin/tmpl/default.xml</filename>
 		<filename>views/admin/tmpl/index.html</filename>		
 		<filename>views/create/index.html</filename>
 		<filename>views/create/view.html.php</filename>
@@ -42,46 +42,31 @@
 		<filename>views/create/tmpl/index.html</filename>		
 	</files>
 
+	<!-- Runs on install -->
     <install>
-		<queries>
-			<query id="1">
-				CREATE TABLE IF NOT EXISTS `#__simpleiclesgeotag`( 
-				`id` int(10) unsigned NOT NULL auto_increment,
-				`content_id` int(10) unsigned NOT NULL,
-				`text` text,  `lat` text NOT NULL,
-				`long` text NOT NULL,
-				`note` text,  
-				PRIMARY KEY  (`id`)
-				)  TYPE=MyISAM;
-			</query>
-			<query id="2">
-				INSERT INTO `#__simpleiclesgeotag` ( `content_id`, `text`, `lat`, `long`, `note`) VALUES( 1, 'Example 1', '-37.16031654673676', '19.6875', NULL);
-			</query>
-			<query id="3">
-				INSERT INTO `#__simpleiclesgeotag` ( `content_id`, `text`, `lat`, `long`, `note`) VALUES( 2, 'Example 2', '34.05265942137599', '-118.2568359375', NULL);
-			</query>
-		</queries>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
     </install>
+	<!-- Runs on uninstall -->
     <uninstall>
-		<queries>
-			<query>
-				DROP TABLE `#__simpleiclesgeotag`;
-			</query>
-		</queries>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
     </uninstall>
  
 	<administration>
-		<menu>Articles Geotag</menu>
+		<menu>Articles SimpleGeoTag</menu>
         <files folder="admin">
 			<filename>index.html</filename>
 			<filename>admin.simplegeotag.php</filename>
 			<filename>config.xml</filename>			
-			<filename>controller.php</filename>			
-			<filename>views/default/index.html</filename>
-			<filename>views/default/view.html.php</filename>
-			<filename>views/default/tmpl/default.php</filename>
-			<filename>views/default/tmpl/index.html</filename>
+			<filename>controller.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- Views files -->
+			<folder>views</folder>
 		</files>  
 	</administration>
     
-</install>
+</extension>

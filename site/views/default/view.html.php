@@ -15,11 +15,12 @@ class SimpleGeoTagViewDefault extends JView
 {
 	function display($tpl = null)
 	{
+		$app = JFactory::getApplication('site');
        
         $rows = $this->get('Data');
         $this->assignRef( 'GeotagList', $rows );
 
-		$params = &JComponentHelper::getParams( 'com_simplegeotag' );
+		$params = $app->getParams( 'com_simplegeotag' );
 
 		$map_type = $params->get( 'map_type' );
 		$this->assignRef( 'map_type', $map_type  );
