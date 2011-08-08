@@ -1,8 +1,9 @@
-<root>
-  <params>
-    <param type="text" name="img_url" default="components/com_simplegeotag/images/flag.png" size="70" label="Image URL:" description="The flag image url" />
-    <param type="text" name="img_width" default="36" size="3" label="Image width (in px):" description="The flag image width in pixel" />
-	<param type="text" name="img_height" default="36" size="3" label="Image height (in px):" description="The flag image size in pixel" />
-	<param type="text" name="img_center" default="21,33" size="8" label="Image center (x,y):" description="The point of the image that mark the geotag. (e.g.: the base of the flag)" />
-  </params>
-</root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <fieldset name="map" label="Map" description="Google Map's settings">
+    <field type="text" name="img_url" default="components/com_simplegeotag/images/flag.png" size="70" label="Image URL:" description="The flag image url" />
+    <field type="text" name="img_width" default="36" size="3" label="Image width (in px):" description="The flag image width in pixel" />
+	<field type="text" name="img_height" default="36" size="3" label="Image height (in px):" description="The flag image size in pixel" />
+	<field type="text" name="img_center" default="21,33" size="8" label="Image center (x,y):" description="The point of the image that mark the geotag. (e.g.: the base of the flag)" />
+  </fieldset>
+</config>

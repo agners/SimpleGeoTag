@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="Manage geotags">
+	<layout title="Manage GeoTags" options="Edit or delete GeoTags">
 		<message>
-			<![CDATA[Manage geotags]]>
+			<![CDATA[Manage GeoTags]]>
 		</message>
 	</layout>
-	<state>
-		<name>Manage geotags</name>
-		<description>Edit or delete geotags</description>
-	</state>
 </metadata>

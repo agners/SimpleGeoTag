@@ -10,7 +10,7 @@
 defined('_JEXEC') or die('Restricted access'); 
  ?>
  
-	      <h3> <?php echo JText::_('Add new geotag') ?></h3>
+	   <h3> <?php echo JText::_('Add new geotag') ?></h3>
 	   <form action="<?php echo JRoute::_( 'index.php?option=com_simplegeotag&task=save' ); ?>" method="post">
 	   <table border="0">
 	     <tr>

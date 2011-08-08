@@ -18,7 +18,7 @@ function store() {
 
 	JTable::addIncludePath(JPATH_COMPONENT.DS.'tables');
 	
-	$row =& $this->getTable('artgeotag', 'Table');
+	$row =& $this->getTable('simplegeotag', 'Table');
 	
 	$data = JRequest::get('post');
 	
@@ -37,7 +37,7 @@ function remove() {
 
 	JTable::addIncludePath(JPATH_COMPONENT.DS.'tables');
 	
-	$row =& $this->getTable('artgeotag', 'Table');
+	$row =& $this->getTable('simplegeotag', 'Table');
 	
 	$id = JRequest::getVar('id','','post');
 	

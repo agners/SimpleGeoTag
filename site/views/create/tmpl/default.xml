@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="Create new geotag">
+	<layout title="Create a GeoTag" option="Create a new GeoTag">
 		<message>
-			<![CDATA[Create new geotag]]>
+			<![CDATA[Create new GeoTag]]>
 		</message>
 	</layout>
-	<state>
-		<name>Create geotags</name>
-		<description>Create a new geotag</description>
-	</state>
 </metadata>

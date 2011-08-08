@@ -3,13 +3,13 @@
 /**
  * @Component "Articles Geotag"
  * @version 1.0
- * @author Alessandro "ArthurDent" Argentiero
+ * @author Stefan Agner/Alessandro "ArthurDent" Argentiero
  * GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
 **/
 
 defined('_JEXEC') or die('Restricted access');
 
-class TableSimplegeoTag extends JTable {
+class TableSimpleGeoTag extends JTable {
 	var $id = null;
 	var $content_id = null;
 	var $text = null;
@@ -17,8 +17,8 @@ class TableSimplegeoTag extends JTable {
 	var $long = null;
 	var $note = null;
 
-	function TableSimplegeoTag(& $db) {
-		parent::__construct( '#__articlesgeotag', 'id', $db);
+	function TableSimpleGeoTag(& $db) {
+		parent::__construct( '#__simplegeotag', 'id', $db);
 	}
 }
 

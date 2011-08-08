@@ -15,7 +15,7 @@ class SimpleGeoTagModel extends JModel
 {
 
 function &getData() {
-	$query = "SELECT g.*,c.* FROM #__articlesgeotag g LEFT JOIN #__content c ON g.content_id=c.id";
+	$query = "SELECT g.*,c.* FROM #__simplegeotag g LEFT JOIN #__content c ON g.content_id=c.id";
 	$this->_db->setQuery($query);
 	$rows = $this->_db->loadObjectList();
     return $rows;
