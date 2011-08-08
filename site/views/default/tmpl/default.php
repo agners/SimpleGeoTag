@@ -10,14 +10,19 @@
 defined('_JEXEC') or die('Restricted access'); 
  
 $doc =& JFactory::getDocument();
+$lang = & JFactory::getLanguage();
 $doc->addStyleSheet('components/com_simplegeotag/css/simplegeotag.css' );
 ?>
    <div id="simplegeotag_map">
 <?php if ( ($this->show_title) == 'y' ) : ?>
 	<div class="componentheading"><h2><?php echo $this->p_title; ?></h2></div>
-<?php endif; ?>
+<?php endif; 
+
+   $langcode = $lang->getTag();
+
+?>
    <div id="map_canvas" style="width: <?php echo $this->map_width ?>; height: <?php echo $this->map_height ?>;"></div>
-   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=it" ></script>
+   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=<?php echo $langcode ?>"></script>
    <script type="text/javascript" >
 
     var articles = [   
@@ -35,7 +40,6 @@ $doc->addStyleSheet('components/com_simplegeotag/css/simplegeotag.css' );
         echo "['".str_replace ("'", "&#8217",$row->title)."',".$row->lat.",".$row->long.",".$row->id.",'".$art_link."','".$art_text."'],\n";
         }
     ?>
-['foo', -33.950198, 151.259302, 1,''] 
     ]; 
    
     var myOptions = {     
