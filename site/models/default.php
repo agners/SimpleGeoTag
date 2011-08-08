@@ -11,14 +11,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
  
 jimport( 'joomla.application.component.model' );
  
-class SimpleGeoTagModel extends JModel
+class SimpleGeoTagModelDefault extends JModel
 {
 
-function &getData() {
-	$query = "SELECT g.*,c.* FROM #__simplegeotag g LEFT JOIN #__content c ON g.content_id=c.id";
-	$this->_db->setQuery($query);
-	$rows = $this->_db->loadObjectList();
-    return $rows;
+	public function getData() {
+		$query = "SELECT g.*,c.* FROM #__simplegeotag g LEFT JOIN #__content c ON g.content_id=c.id";
+		$this->_db->setQuery($query);
+		$rows = $this->_db->loadObjectList();
+		return $rows;
     }
 }
 ?>

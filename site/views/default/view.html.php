@@ -18,7 +18,7 @@ class SimpleGeoTagViewDefault extends JView
 		$app = JFactory::getApplication('site');
        
         $rows = $this->get('Data');
-        $this->assignRef( 'GeotagList', $rows );
+        $this->assignRef( 'GeoTagList', $rows );
 
 		$params = $app->getParams( 'com_simplegeotag' );
 

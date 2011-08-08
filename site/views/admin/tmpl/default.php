@@ -32,22 +32,22 @@
      </tr>
   
     <?php	
-        foreach ($this->GeotagList as $row) {
-        echo "<TR>";
-        echo "<TD>";
+        foreach ($this->GeoTagList as $row) {
+        echo "<tr>";
+        echo "<td>";
         echo $row->gid;
-		echo "</TD><TD>";
+		echo "</td><td>";
         echo $row->lat;
-		echo "</TD><TD>";
+		echo "</td><td>";
         echo $row->long;
-		echo "</TD><TD>";
+		echo "</td><td>";
         echo $row->content_id;
-		echo "</TD><TD>";
+		echo "</td><td>";
         echo $row->title;
-        echo "</TD><TD>";   
+		echo "</td><td>";
         echo '<input type="button" value="'.JText::_('Delete').'" onClick="edit('.$row->gid.');" />';
-        echo "</TD>";
-        echo "</TR>";
+        echo "</td>";
+        echo "</tr>";
         }
     ?>
     </table>

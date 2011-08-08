@@ -16,8 +16,8 @@ class SimpleGeoTagViewAdmin extends JView
 {
 	function display($tpl = null)
 	{
-        $rows = $this->get('GeotagList');
-        $this->assignRef( 'GeotagList',        $rows );
+        $rows = $this->get('GeoTagList');
+        $this->assignRef( 'GeoTagList', $rows );
 
 		parent::display($tpl);
 	}

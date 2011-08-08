@@ -32,7 +32,7 @@ class SimpleGeoTagController extends JController
 		if ($model->store()) {
 			$msg = JText::_('Geotag Saved');
 		} else {
-			$msg = JText::_('Error').': '.$model->getError() ;
+			$msg = JText::_('Error').': '.$model->getError();
 		}
         
 		$this->setredirect(JRoute::_('index.php'), $msg);
@@ -47,7 +47,7 @@ class SimpleGeoTagController extends JController
 		if ($model->remove()) {
 			$msg = JText::_('Geotag Deleted');
 		} else {
-			$msg = JText::_('Error').': '.$model->getError() ;
+			$msg = JText::_('Error').': '.$model->getError();
 		}
         
 		$this->setredirect(JRoute::_('index.php'), $msg);

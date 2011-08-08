@@ -7,7 +7,7 @@
 	<authorUrl>http://blog.agner.ch</authorUrl>
     <copyright>This component is released under the GNU/GPLv3 License</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 	<description>This component can assign geotag to articles and show them on a map (forked version of artgeotag from Alessandro Argentiero)</description>
 
 	<files folder="site">
@@ -15,15 +15,15 @@
 		<filename>simplegeotag.php</filename>
 		<filename>index.html</filename>
         <filename>images/flag.png</filename>
-        <filename>images/sub.png</filename>		
+        <filename>images/sub.png</filename>
         <filename>css/simplegeotag.css</filename>
 		<filename>tables/index.html</filename>	
 		<filename>tables/simplegeotag.php</filename>
 		<filename>models/index.html</filename>
 		<filename>models/admin.php</filename> 
-		<filename>models/common.php</filename> 		
-		<filename>models/create.php</filename> 			
-		<filename>models/simplegeotag.php</filename>        
+		<filename>models/common.php</filename>
+		<filename>models/create.php</filename>
+		<filename>models/default.php</filename>
 		<filename>views/index.html</filename>
 		<filename>views/default/index.html</filename>
 		<filename>views/default/view.html.php</filename>
@@ -34,12 +34,12 @@
 		<filename>views/admin/view.html.php</filename>
 		<filename>views/admin/tmpl/default.php</filename>
 		<filename>views/admin/tmpl/default.xml</filename>
-		<filename>views/admin/tmpl/index.html</filename>		
+		<filename>views/admin/tmpl/index.html</filename>
 		<filename>views/create/index.html</filename>
 		<filename>views/create/view.html.php</filename>
 		<filename>views/create/tmpl/default.php</filename>
         <filename>views/create/tmpl/default.xml</filename>
-		<filename>views/create/tmpl/index.html</filename>		
+		<filename>views/create/tmpl/index.html</filename>
 	</files>
 
 	<!-- Runs on install -->

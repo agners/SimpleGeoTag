@@ -19,7 +19,7 @@ class SimpleGeoTagViewCreate extends JView
     {
         /*  $model =& $this->getModel('artgeotag'); */
         $rows = $this->get('ArticleList');
-        $this->assignRef( 'ArticleList',        $rows );
+        $this->assignRef( 'ArticleList', $rows);
 
         parent::display($tpl);
      

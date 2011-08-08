@@ -12,17 +12,17 @@ defined('_JEXEC') or die('Restricted access');
 $doc =& JFactory::getDocument();
 $doc->addStyleSheet('components/com_simplegeotag/css/simplegeotag.css' );
 ?>
-   <div id="mappa_articoli">
+   <div id="simplegeotag_map">
 <?php if ( ($this->show_title) == 'y' ) : ?>
 	<div class="componentheading"><h2><?php echo $this->p_title; ?></h2></div>
 <?php endif; ?>
-   <div id="map_canvas" style="width: <?php echo $this->map_width ?>; height: <?php echo $this->map_height ?>;"  ></div>
+   <div id="map_canvas" style="width: <?php echo $this->map_width ?>; height: <?php echo $this->map_height ?>;"></div>
    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=it" ></script>
-    <script type="text/javascript" >
+   <script type="text/javascript" >
 
     var articles = [   
     <?php	
-        foreach ($this->GeotagList as $row) {
+        foreach ($this->GeoTagList as $row) {
 		$art_text = $row->introtext;
         $art_text = strip_tags($art_text); 
         $art_text = substr($art_text,0,400);
@@ -62,14 +62,14 @@ $doc->addStyleSheet('components/com_simplegeotag/css/simplegeotag.css' );
                                   zIndex: mark[3],
 								  icon: image
                                 }); 
-      var contentString = '<DIV class="gm_info_window"><p>';
-	  /* contentString += '<h3><a href="'+mark[4]+'">'+mark[0]+'</a></h3><p>'; */
-	  /* contentString += mark[5]+'[...]'; */
+      var contentString = '<div class="gm_info_window"><p>';
 	  contentString += mark[5]+' &nbsp;<a href="'+mark[4]+'">[';
       contentString += '<?php echo JText::_('Go to the article') ?>'; 
-	  contentString += '...]</a></p><DIV>';
-	  
-	  attach_infowindow(map,marker,contentString);
+	  contentString += '...]</a></p><div>';
+	  console.log("Content: " + contentString);
+	  console.log("Marker: ");
+	  console.log(marker);
+	  attach_infowindow(map, marker, contentString);
   
     }
 
