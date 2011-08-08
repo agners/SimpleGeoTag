@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="1.6.0" client="site" method="upgrade">
 	<name>SimpleGeoTag</name>
 	<creationDate>2011-08-08</creationDate>
@@ -7,7 +7,7 @@
 	<authorUrl>http://blog.agner.ch</authorUrl>
     <copyright>This component is released under the GNU/GPLv3 License</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<version>0.3</version>
+	<version>0.1.0</version>
 	<description>This component can assign geotag to articles and show them on a map (forked version of artgeotag from Alessandro Argentiero)</description>
 
 	<files folder="site">
@@ -56,7 +56,7 @@
     </uninstall>
  
 	<administration>
-		<menu>Articles SimpleGeoTag</menu>
+		<menu>SimpleGeoTag</menu>
         <files folder="admin">
 			<filename>index.html</filename>
 			<filename>admin.simplegeotag.php</filename>

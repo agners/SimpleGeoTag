@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <config>
   <fieldset name="map" label="Map" description="Google Map's settings">
     <field type="text" name="img_url" default="components/com_simplegeotag/images/flag.png" size="70" label="Image URL:" description="The flag image url" />
