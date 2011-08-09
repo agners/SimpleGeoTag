@@ -62,7 +62,7 @@ $lang = & JFactory::getLanguage();
 	   <BR />
    
 	<?php 
-	echo JText::_('Drag the marker on the map below to locate the article') 
+	echo JText::_('Drag the marker on the map below to locate the article');
 	$langcode = $lang->getTag();
 	?>
 	<div id="map_canvas" style="width: 500px; height: 300px" ></div> 

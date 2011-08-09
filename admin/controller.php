@@ -14,7 +14,7 @@ class SimpleGeoTagController extends JController
 	 */
 	function display($cachable = false) {
 		// set default view if not set
-		JRequest::setVar('view', JRequest::getCmd('view', 'Default'));
+		JRequest::setVar('view', JRequest::getCmd('view', 'default'));
 		
 		// call parent behavior
 		parent::display($cachable);

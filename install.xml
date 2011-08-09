@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="1.6.0" client="site" method="upgrade">
+<extension version="1.6" type="component" client="site" method="upgrade">
 	<name>SimpleGeoTag</name>
-	<creationDate>2011-08-08</creationDate>
+	<creationDate>August 2011</creationDate>
 	<author>Stefan Agner</author>
 	<authorEmail>stefan@agner.ch</authorEmail>
 	<authorUrl>http://blog.agner.ch</authorUrl>
     <copyright>This component is released under the GNU/GPLv3 License</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<description>This component can assign geotag to articles and show them on a map (forked version of artgeotag from Alessandro Argentiero)</description>
 
 	<files folder="site">
@@ -17,29 +17,9 @@
         <filename>images/flag.png</filename>
         <filename>images/sub.png</filename>
         <filename>css/simplegeotag.css</filename>
-		<filename>tables/index.html</filename>	
-		<filename>tables/simplegeotag.php</filename>
-		<filename>models/index.html</filename>
-		<filename>models/admin.php</filename> 
-		<filename>models/common.php</filename>
-		<filename>models/create.php</filename>
-		<filename>models/default.php</filename>
-		<filename>views/index.html</filename>
-		<filename>views/default/index.html</filename>
-		<filename>views/default/view.html.php</filename>
-		<filename>views/default/tmpl/default.php</filename>
-        <filename>views/default/tmpl/default.xml</filename>
-		<filename>views/default/tmpl/index.html</filename>
-		<filename>views/admin/index.html</filename>
-		<filename>views/admin/view.html.php</filename>
-		<filename>views/admin/tmpl/default.php</filename>
-		<filename>views/admin/tmpl/default.xml</filename>
-		<filename>views/admin/tmpl/index.html</filename>
-		<filename>views/create/index.html</filename>
-		<filename>views/create/view.html.php</filename>
-		<filename>views/create/tmpl/default.php</filename>
-        <filename>views/create/tmpl/default.xml</filename>
-		<filename>views/create/tmpl/index.html</filename>
+		<folder>tables</folder>
+		<folder>models</folder>
+		<folder>views</folder>
 	</files>
 
 	<!-- Runs on install -->

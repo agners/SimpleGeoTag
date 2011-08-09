@@ -13,7 +13,7 @@ class SimpleGeoTagViewDefault extends JView
 		global $mainframe;
 
 		JToolBarHelper::title( JText::_( 'Article Geotag' ), 'icon-48-generic.png' );
-		JToolBarHelper::preferences( 'com_simplegeotag', '250' );
+		JToolBarHelper::preferences( 'com_simplegeotag', '270' );
 
 		parent::display($tpl);
 	}
