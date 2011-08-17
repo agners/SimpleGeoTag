@@ -25,6 +25,14 @@
 				message="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LONGITUDE_MESSAGE"
 				size="30"
 			/>
+			<field
+				name="mapicon"
+				type="MapIcon"
+				id="mapicon"
+				description="PLG_CONTENT_SIMPLEGEOTAG_FIELD_MAPICON_DESC"
+				label="PLG_CONTENT_SIMPLEGEOTAG_FIELD_MAPICON_LABEL"
+				message="PLG_CONTENT_SIMPLEGEOTAG_FIELD_MAPICON_MESSAGE"
+			/>
 		</fieldset>
 	</fields>
 </form>

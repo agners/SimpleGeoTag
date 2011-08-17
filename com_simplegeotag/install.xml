@@ -7,7 +7,7 @@
 	<authorUrl>http://blog.agner.ch</authorUrl>
     <copyright>This component is released under the GNU/GPLv3 License</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 	<description>COM_SIMPLEGEOTAG_DESCRIPTION</description>
 
 	<files folder="site">
@@ -37,7 +37,7 @@
     </uninstall>
  
 	<administration>
-		<menu>SimpleGeoTag</menu>
+		<menu>COM_SIMPLEGEOTAG</menu>
         <files folder="admin">
 			<filename>index.html</filename>
 			<filename>admin.simplegeotag.php</filename>
@@ -47,6 +47,8 @@
 			<folder>sql</folder>
 			<!-- Views files -->
 			<folder>views</folder>
+			<!-- Model files -->
+			<folder>models</folder>
 		</files>
 		<languages folder="admin">
 			<language tag="en-GB">language/en-GB/en-GB.com_simplegeotag.ini</language>

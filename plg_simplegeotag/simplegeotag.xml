@@ -8,7 +8,7 @@
     <copyright>This component is released under the GNU/GPLv3 License</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<version>0.1.2</version>
-	<description>PLG_CONTENT_SIMPLEGEOTAG_XML_DESCRIPTION</description>
+	<description>plg_content_simplegeotag_xml_description</description>
 
 	<files>
 		<filename plugin="simplegeotag">simplegeotag.php</filename>

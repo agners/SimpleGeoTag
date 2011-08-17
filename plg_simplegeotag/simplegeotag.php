@@ -7,6 +7,7 @@
 
 defined('JPATH_BASE') or die;
 jimport('joomla.utilities.date');
+JForm::addFieldPath(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_simplegeotag' . DS . 'models' . DS . 'fields');
 
 /**
  * An example custom profile plugin.
@@ -169,7 +170,7 @@ class plgContentSimpleGeoTag extends JPlugin
 		// Add the registration fields to the form.
 		JForm::addFormPath(dirname(__FILE__).'/geotag');
 		$form->loadFile('geotag', false);
-
+		//throw new Exception(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_simplegeotag' . DS . 'models' . DS . 'fields');
 		// Set whether location is requried
 		$form->setFieldAttribute('latitude', 'required', $this->params->get('require_location') == 2, 'metadata');
 		$form->setFieldAttribute('longitude', 'required', $this->params->get('require_location') == 2, 'metadata');
