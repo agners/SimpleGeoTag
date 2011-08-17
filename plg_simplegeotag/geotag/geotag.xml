@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: profile.xml 20156 2011-01-07 13:10:16Z eddieajau $ -->
+<form>
+	<fields name="metadata">
+		<fieldset name="geotag"
+			label="PLG_CONTENT_SIMPLEGEOTAG_SLIDER_LABEL"
+		>
+			<field
+				name="latitude"
+				type="text"
+				id="latitude"
+				description="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LATITUDE_DESC"
+				filter="string"
+				label="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LATITUDE_LABEL"
+				message="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LATITUDE_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="longitude"
+				type="text"
+				id="longitude"
+				description="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LONGITUDE_DESC"
+				filter="string"
+				label="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LONGITUDE_LABEL"
+				message="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LONGITUDE_MESSAGE"
+				size="30"
+			/>
+		</fieldset>
+	</fields>
+</form>

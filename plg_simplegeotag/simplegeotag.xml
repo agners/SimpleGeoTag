@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="content">
+	<name>plg_content_simplegeotag</name>
+	<creationDate>August 2011</creationDate>
+	<author>Stefan Agner</author>
+	<authorEmail>stefan@agner.ch</authorEmail>
+	<authorUrl>http://blog.agner.ch</authorUrl>
+    <copyright>This component is released under the GNU/GPLv3 License</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>0.1.2</version>
+	<description>PLG_CONTENT_SIMPLEGEOTAG_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="simplegeotag">simplegeotag.php</filename>
+		<filename>index.html</filename>
+		<folder>geotag</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_simplegeotag.ini</language>
+		<language tag="en-GB">en-GB.plg_content_simplegeotag.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_content_simplegeotag.ini</language>
+		<language tag="de-DE">de-DE.plg_content_simplegeotag.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="require_location" type="list"
+					description="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LOCATION_DESC"
+					label="PLG_CONTENT_SIMPLEGEOTAG_FIELD_LOCATION_LABEL"
+				>
+					<option value="2">JOPTION_REQUIRED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="0">JDISABLED</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
