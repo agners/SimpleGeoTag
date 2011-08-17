@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.6" type="component" client="site" method="upgrade">
-	<name>SimpleGeoTag</name>
+	<name>COM_SIMPLEGEOTAG</name>
 	<creationDate>August 2011</creationDate>
 	<author>Stefan Agner</author>
 	<authorEmail>stefan@agner.ch</authorEmail>
 	<authorUrl>http://blog.agner.ch</authorUrl>
     <copyright>This component is released under the GNU/GPLv3 License</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<version>0.1.2</version>
-	<description>This component can assign geotag to articles and show them on a map (forked version of artgeotag from Alessandro Argentiero)</description>
+	<version>0.2.0</version>
+	<description>COM_SIMPLEGEOTAG_DESCRIPTION</description>
 
 	<files folder="site">
 		<filename>controller.php</filename>
@@ -20,6 +20,7 @@
 		<folder>tables</folder>
 		<folder>models</folder>
 		<folder>views</folder>
+		<folder>language</folder>
 	</files>
 
 	<!-- Runs on install -->
@@ -46,7 +47,11 @@
 			<folder>sql</folder>
 			<!-- Views files -->
 			<folder>views</folder>
-		</files>  
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_simplegeotag.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_simplegeotag.sys.ini</language>
+		</languages>
 	</administration>
     
 </extension>

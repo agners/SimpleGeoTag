@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="View Articles Map" option="Show a map with a marker for each article geotagged (optiontext)">
-		<message>
-			<![CDATA[View Articles Map]]>
-		</message>
+	<layout title="COM_SIMPLEGEOTAG_CATEGORY_VIEW_TITLE">
+		<message>COM_SIMPLEGEOTAG_CATEGORY_VIEW_DESC</message>
 	</layout>
 	<fields name="params">
 		<fieldset name="basic">
