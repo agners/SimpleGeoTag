@@ -15,12 +15,10 @@ class SimpleGeoTagModelMapIcons extends JModelList
 	 */
 	protected function getListQuery()
 	{
-		// Create a new query object.
+		// Use the query object to get map icons (google names them "markers") from table.
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		// Select some fields
-		$query->select('id,name,image,size_width,size_height');
-		// From the hello table
+		$query->select('id,name,image,size_width,size_height,anchor_x,anchor_y');
 		$query->from('#__simplegeotag_markers');
 		return $query;
 	}

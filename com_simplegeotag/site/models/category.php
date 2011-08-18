@@ -14,11 +14,20 @@ jimport( 'joomla.application.component.model' );
 class SimpleGeoTagModelCategory extends JModel
 {
 
+	/*
+	 * Gets geotag data for a category
+	 */
 	public function getData() {
 		JLoader::import( 'articles', JPATH_SITE . DS . 'components' . DS . 'com_content' . DS . 'models' );
 		$model = JModel::getInstance('Articles', 'ContentModel');
-		$model->setState('params', JFactory::getApplication()->getParams());
-		//var_dump($model->getState());
+		
+		JLoader::import( 'mapicons', JPATH_COMPONENT_ADMINISTRATOR . DS . 'models' );
+		$mapiconmodel = JModel::getInstance('MapIcons', 'SimpleGeoTagModel');
+		$mapicons = $mapiconmodel->getItems();
+		/*
+		var_dump($mapiconmodel);
+		var_dump($mapicons);
+		*/
 		
 		
 		$rows = $model->getItems();
@@ -34,22 +43,56 @@ class SimpleGeoTagModelCategory extends JModel
 			// Read our aditional metadata from the article...
 			$longitude = $row->metadata->getValue('longitude');
 			$latitude = $row->metadata->getValue('latitude');
+			$mapiconid = $row->metadata->getValue('mapicon');
 			
-			if($longitude != null && $latitude != null)
+			// If article contains latitude/longitude information...
+			if($longitude != null && $latitude != null && $longitude != "" && $latitude != "")
 			{
-				// Add geotag to our array...
+				// Add its geotag to our array...
 				$geotag = array();
 				$geotag['longitude'] = $longitude;
 				$geotag['latitude'] = $latitude;
 				$geotag['title'] = $row->title;
-				$geotag['introtext'] = $row->introtext;
 				$geotag['id'] = $row->id;
+				
+				// Generate an intro text 
+				$content = array();
+				$content[] = '<div class="simplegeotag_info_window">';
+				// Generate title with link...
+				$link = JRoute::_( 'index.php?option=com_content&view=article&id='.$row->id );
+				$content[] = '<a href="'.$link.'">'.$row->title.'</a>';
+				
+				// Format introtext accordingly...
+				/* TODO: more configurable... we can use $row->introtext as well
+				$introtext = strip_tags($row->introtext);
+				$introtext = str_replace ("\n", "", $introtext);
+				$introtext = str_replace ("\r", "", $introtext);      
+				$introtext = str_replace ("'", "&#8217", $introtext);
+				$introtext = preg_replace('/\s+/', ' ', $introtext);
+				$content[] = '<p>'.$introtext.'</p>';
+				*/
+				
+				$content[] = '</div>';
+				
+				// Content
+				$geotag['content'] = implode($content);
+				
+				// Search map icon for this article...
+				foreach($mapicons as $mapicon)
+				{
+					if($mapicon->id == $mapiconid)
+					{
+						// Copy mapicon information into the geotag array
+						$geotag['image'] = $mapicon->image;
+						$geotag['size_width'] = $mapicon->size_width;
+						$geotag['size_height'] = $mapicon->size_height;
+						$geotag['anchor_x'] = $mapicon->anchor_x;
+						$geotag['anchor_y'] = $mapicon->anchor_y;
+						break;
+					}
+				}
 				$geotags[] = $geotag;
 			}
-		}
-		foreach($geotags as $geotag)
-		{
-			var_dump($geotag);
 		}
 		return $geotags;
     }

@@ -24,7 +24,7 @@ class SimpleGeoTagViewCategory extends JView
 
 		$map_type = $params->get( 'map_type' );
 		$this->assignRef( 'map_type', $map_type  );
-		
+		/*
 		$img_url = $params->get( 'img_url' );
 		$this->assignRef( 'img_url', $img_url );
 		
@@ -36,7 +36,7 @@ class SimpleGeoTagViewCategory extends JView
 		
 		$img_center = $params->get( 'img_center' );
 		$this->assignRef( 'img_center', $img_center );
-		
+		*/
 		$zoom_level = $params->get( 'zoom_level' );
 		$this->assignRef( 'zoom_level', $zoom_level  );
 		

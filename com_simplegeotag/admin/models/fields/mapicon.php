@@ -52,7 +52,7 @@ class JFormFieldMapIcon extends JFormFieldList
 		$js[] = "var mapicons = ";
 		$js[] = json_encode($this->items);
 		$js[] = ";\n";
-		$js[] = "function setmapicon (val) {\n";
+		$js[] = "function setMapIcon (val) {\n";
 		$js[] = "	var mapicon = mapicons.filter(function(item, index, arr) { if(item[\"id\"] == val) return true;  },val)[0];\n";
 		$js[] = "	var imgtag = $('jform_metadata_mapicon_img')\n";
 		$js[] = "	imgtag.src = mapicon['image'];\n";
@@ -62,7 +62,7 @@ class JFormFieldMapIcon extends JFormFieldList
 		
 		$doc->addScriptDeclaration(implode($js));
 		
-		$this->element['onchange'] = "setmapicon(this.value)";
+		$this->element['onchange'] = "setMapIcon(this.value)";
 		$html = parent::getInput();
 		
 		$this->imgid = $this->id.'_'.$this->imgid;
